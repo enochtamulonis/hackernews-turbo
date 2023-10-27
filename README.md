@@ -15,4 +15,8 @@ Welcome to the repository! This challenge was quite interesting, and it was a gr
 3. Run `bin/dev` to start the development server.
 4. Visit [localhost:3000](http://localhost:3000) in your browser.
 
+### Additional details
+
+- To populate the data without waiting for sidekiq scheduler run `SyncTopPosts.new.call` in the rails console
+
 Feel free to explore the nested comments feature and the use of Turbo Frames to dynamically load comments and replies. Enjoy exploring the application!
