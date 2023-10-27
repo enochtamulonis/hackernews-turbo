@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the repository! This challenge was quite interesting, and it was a great experience leveraging Hotwire to enhance interactivity and accelerate page loads.
 
-Things you may want to cover:
+### Required Versions
 
-* Ruby version
+- Ruby: 3.2.2
+- Redis
+- PostgreSQL
 
-* System dependencies
+### Installation Steps
 
-* Configuration
+1. Run `bundle install` to install dependencies.
+2. Execute `rails db:setup` to set up the database.
+3. Run `bin/dev` to start the development server.
+4. Visit [localhost:3000](http://localhost:3000) in your browser.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to explore the nested comments feature and the use of Turbo Frames to dynamically load comments and replies. Enjoy exploring the application!
