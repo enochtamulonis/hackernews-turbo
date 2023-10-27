@@ -2,7 +2,7 @@
 
 Welcome to the repository! This challenge was quite interesting, and it was a great experience leveraging Hotwire to enhance interactivity and accelerate page loads.
 
-### Required Versions
+### Required Tools
 
 - Ruby: 3.2.2
 - Redis
