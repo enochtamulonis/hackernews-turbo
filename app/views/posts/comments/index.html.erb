@@ -1,0 +1,9 @@
+<%= turbo_frame_tag @post, :comments  do %>
+  <%= render "posts/comments/comments_link", post: @post, open: true %>
+  <div class="flex flex-col gap-4 ml-6">
+    <%= render partial: "comment", collection: @post.comments %>
+  </div>
+  <% if !@post.comments.any? %>
+    <p class="text-xl text-center"> No comments on this post yet </p>
+  <% end %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= turbo_frame_tag @comment, :nested_comments do %>
+  <div class="ml-6">
+    <% @comment.nested_comments.each do |nested_comment| %>
+      <%= render "posts/comments/comment", comment: nested_comment %>
+    <% end %>
+  </div>
+<% end %>

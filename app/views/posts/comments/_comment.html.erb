@@ -1,0 +1,17 @@
+<div class="w-full p-2 text-indigo-900 text-xl">
+  <% if comment.data["deleted"] %>
+    [This comment was deleted]
+  <% else %>
+    <%= comment.data.fetch("text", nil)&.html_safe %>
+    <p class="text-gray-700">
+      <span class="text-indigo-700"> <%= comment.data["by"] %> </span>
+      commented 
+      <span> <%= time_ago_in_words(Time.at(comment.data["time"])) %> </span>
+    </p>
+    <% if comment.nested_comments.count.positive? %>
+      <%= turbo_frame_tag comment, :nested_comments do %>
+        <%= link_to "Load #{comment.nested_comments.size} replies", comment_nested_comments_path(comment), class: "text-sm text-indigo-500" %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

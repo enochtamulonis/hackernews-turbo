@@ -1,0 +1,5 @@
+:scheduler:
+  :schedule:
+    sync_top_posts:
+      cron: "0 0 * * * *" # Runs once per hour
+      class: SyncTopPostsJob

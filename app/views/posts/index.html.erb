@@ -1,0 +1,25 @@
+<div class="w-full flex flex-col items-center pt-16">
+  <h1 class="text-5xl text-gray-900 text-center font-semibold"> Top 10 posts from HN </h1>
+  <p class="text-xl text-gray-700 mt-2 max-w-md w-full mx-auto text-center"> 
+    A simple UI that lists popular posts. 
+    <br/>
+    Built with Ruby on Rails, Hotwire, and Tailwind CSS
+  </p>
+</div>
+
+<div class="flex justify-center items-center gap-8 mt-8">
+  <%= image_tag "hn.png", class: "h-36 transform hover:scale-105" %>
+  <span class="text-7xl text-indigo-500" text-indigo-500> + </span>
+  <%= image_tag "hotwire.png", class: "h-36 transform hover:scale-105" %>
+</div>
+
+<div class="max-w-7xl w-full mx-auto flex justify-center items-center gap-4 mt-8">
+  <div class="w-8 text-green-900">
+    <%= render Icons::LightBulbComponent.new %>
+  </div>
+  <p class="text-xl text-green-900"> Click on a row to show comments </p>
+</div>
+
+<div class="max-w-7xl w-full mx-auto flex flex-col gap-4 mb-16 mt-4">
+  <%= render partial: "post", collection: @posts %>
+</div>

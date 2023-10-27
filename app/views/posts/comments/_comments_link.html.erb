@@ -1,0 +1,24 @@
+<% if open == true %>
+  <% @url = root_path %>
+<% else %>
+  <% @url = post_comments_path(post) %>
+<% end %>
+<a href="<%= @url %>" class="w-full bg-gray-300 rounded-lg p-2 flex justify-between hover:bg-gray-400" 
+  id="<%= dom_id(post, :comments_link) %>"  
+  <p class="text-xl text-center"> <%= post.data["title"] %> </p>
+  <div class="flex gap-4 items-center justify-between">
+    <div class="flex items-center gap-2 w-16 truncate">
+      <div class="w-8">
+        <%= render Icons::CommentComponent.new %> 
+      </div>  
+      <%= post.data["descendants"] %>
+    </div>
+
+    <div class="flex items-center gap-2 w-16 truncate">
+      <div class="w-8">
+        <%= render Icons::ThumbsUpComponent.new %> 
+      </div>  
+      <%= post.data["score"] %>
+    </div>
+  </div>
+</a>
